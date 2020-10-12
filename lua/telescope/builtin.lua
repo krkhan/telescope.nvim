@@ -190,7 +190,7 @@ builtin.lsp_document_symbols = function(opts)
       results = locations,
       entry_maker = make_entry.gen_from_quickfix(opts)
     },
-    previewer = previewers.vim_buffer.new(opts),
+    previewer = previewers.qflist.new(opts),
     sorter    = sorters.get_generic_fuzzy_sorter(),
   }):find()
 end
